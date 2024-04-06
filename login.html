@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Sign up and Sign in Form</title>
+        <link rel="stylesheet" href="signuplogin-form.css">
+        <script src="https://kit.fontawesome.com/ebe2238a43.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <!-- Header Section -->
+    <header>
+        <div class="container">
+            <a href="index.html"><img src="logo.png"></a>
+            <nav>
+                <ul>
+                    <li><a href="calorie-tracking.html">Calorie Tracking</a></li>
+                    <li><a href="exercise-logging.html">Exercise Logging</a></li>
+                    <li><a href="educational-resources.html">Educational Resources</a></li>
+                    <li><a href="login.html">Login / Sign up</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+        <!-- Login/Sign Up Section -->
+        <div class="container2">
+             <div class="form-box">
+                <h1 id="title">Sign up</h1>
+                <form>
+                    <div class="input-group">
+                        <div class="input-field" id="namefield">
+                            <i class="fa-solid fa-user"></i>
+                            <input type="text" placeholder="Name">
+                        </div>
+
+                        <div class="input-field">
+                            <i class="fa-solid fa-envelope"></i>
+                            <input type="email" placeholder="Email" size="50">
+                        </div>
+
+                        <div class="input-field">
+                            <i class="fa-solid fa-key"></i>
+                            <input type="password" placeholder="Password">
+                        </div>
+                        <p>Forgot password? <a href="#">Click Here!</a></p>
+                    </div>
+                    <div class="btn-field">
+                        <button type="button" id="signupbtn">Sign up</button>
+                        <button type="button" id="signinbtn" class="off">Sign in</button>
+                    </div>
+                </form>
+             </div>
+        </div>
+        <script src="login-sign-up.js"></script>
+    </body>
+</html>

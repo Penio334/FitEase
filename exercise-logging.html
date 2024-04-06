@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Calorie Tracking</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+         <!-- Header Section -->
+    <header>
+        <div class="container">
+            <a href="index.html"><img src="logo.png"></a>
+            <nav>
+                <ul>
+                    <li><a href="calorie-tracking.html">Calorie Tracking</a></li>
+                    <li><a href="exercise-logging.html">Exercise Logging</a></li>
+                    <li><a href="educational-resources.html">Educational Resources</a></li>
+                    <li><a href="login.html">Login / Sign up</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+        <!-- Exercise Logging Section -->
+<section id="exercise-logging" class="exercise-logging">
+    <div class="container">
+        <h2>Exercise Logging</h2>
+        <form id="exercise-form">
+            <div class="form-group">
+                <label for="exercise-name">Exercise Name:</label>
+                <input type="text" id="exercise-name" name="exercise-name" placeholder="Enter the exercise name">
+            </div>
+            <div class="form-group">
+                <label for="exercise-duration">Duration (minutes):</label>
+                <input type="number" id="exercise-duration" name="exercise-duration" placeholder="Enter the duration">
+            </div>
+            <div class="form-group">
+                <label for="exercise-intensity">Intensity (1-10):</label>
+                <input type="number" id="exercise-intensity" name="exercise-intensity" placeholder="Enter the intensity">
+            </div>
+            <button type="submit" class="btn">Log Exercise</button>
+        </form>
+        <div id="exercise-log">
+            <!-- Logged exercises will be displayed here -->
+        </div>
+    </div>
+</section>
+
+        <script src="script.js"></script>
+    </body>
+</html>
