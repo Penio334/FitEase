@@ -1,13 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
 /* Browser styles */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
 
 /* Global styles */
 body {
-    font-family: Arial, sans-serif;
     line-height: 1.6;
     background-color: #f4f4f4;
     color: #333;
@@ -24,16 +26,13 @@ header {
     background-color: #333;
     padding: 20px 0;
     text-align: center;
-    color: #fff;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
 }
 
 header img {
-    width: 250px; /* Adjust the width as needed */
-    height: 10%; /* Maintain aspect ratio */
-    margin-top: -20px; /* Add some top margin */
+    width: 200px; 
+    height: 10%;
+    margin-top: -20px;
+    margin-right: 35px;
 }
 
 .logo {
@@ -170,7 +169,7 @@ nav ul li a {
 footer {
     background-color: #333;
     color: #fff;
-    padding: 20px 0;
+    padding: 5px 0;
     text-align: center;
 }
 
@@ -271,21 +270,21 @@ footer ul li {
 /* Educational Resources Section styles */
 .resource {
     margin-bottom: 30px;
-    text-align: center; /* Center align content */
+    text-align: center;
 }
 
 .resource .content {
-    display: inline-block; /* Display content inline */
-    text-align: left; /* Left align content inside */
+    display: inline-block; 
+    text-align: left;
 }
 
 .resource img {
-    display: block; /* Ensure image behaves like a block element */
-    margin: 0 auto 10px; /* Center the image horizontally and add margin below */
+    display: block; 
+    margin: 0 auto 10px; 
 }
 
 .resource a {
-    display: block; /* Make the button a block element */
+    display: block;
     padding: 10px 20px;
     background-color: #333;
     color: #fff;
@@ -297,3 +296,71 @@ footer ul li {
 .resource a:hover {
     background-color: #555;
 }
+
+
+/* Upper navigation */
+.nav-links {
+    align-items: center;
+    background: #333;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.nav-links li{
+    list-style: none;
+    margin: 0 30px;
+}
+
+.nav-links li a{
+    position: relative;
+    color: #fff; 
+    font-size: 20px;
+    font-weight: 500;
+    padding: 6px 0;
+    text-decoration: none;
+}
+
+.nav-links li a:before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 3px;
+    width: 0%;
+    background: #00CC99;
+    border-radius: 12px;
+    transition: all 0.4s ease;
+}
+
+.nav-links li a:hover:before{
+    width: 100%;
+}
+
+.nav-links li.center a:before{
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.nav-links li.upward a:before{
+    width: 100%;
+    bottom: -5px;
+    opacity: 0;
+}
+
+.nav-links li.upward a:hover:before{
+    bottom: 0px;
+    opacity: 1;
+}
+
+.nav-links li.forward a:before{
+    width: 100%;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.4s ease;
+}
+
+.nav-links li.forward a:hover:before{
+    transform: scaleX(1);
+    transform-origin: left;
+}
+

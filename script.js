@@ -59,7 +59,7 @@ document.addEventListener('DOMContentLoaded', function() {
         `;
         exerciseLog.appendChild(exerciseItem);
 
-        // Clear the form fields after logging exercise
+        // Clears form
         exerciseForm.reset();
     });
 });
@@ -79,7 +79,7 @@ document.addEventListener('DOMContentLoaded', function() {
             return;
         }
 
-        // Store user's goal in localStorage
+        // Storing user goal in localstorage
         localStorage.setItem('fitnessGoal', JSON.stringify({ type: goalType, target: goalTarget }));
 
         // Display goal progress
@@ -102,56 +102,4 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Display goal progress on page load
     displayGoalProgress();
-});
-
-document.addEventListener('DOMContentLoaded', function() {
-    const loginForm = document.getElementById('login-form');
-    const signupForm = document.getElementById('signup-form');
-    const switchToSignupLink = document.getElementById('switch-to-signup');
-    const switchToLoginLink = document.getElementById('switch-to-login');
-
-    // Function to switch to signup form
-    switchToSignupLink.addEventListener('click', function(event) {
-        event.preventDefault();
-        loginForm.style.display = 'none';
-        signupForm.style.display = 'block';
-    });
-
-    // Function to switch to login form
-    switchToLoginLink.addEventListener('click', function(event) {
-        event.preventDefault();
-        signupForm.style.display = 'none';
-        loginForm.style.display = 'block';
-    });
-
-    // Function to handle login form submission
-    loginForm.addEventListener('submit', function(event) {
-        event.preventDefault();
-
-        // Get input values
-        const email = document.getElementById('login-email').value;
-        const password = document.getElementById('login-password').value;
-
-        // Perform authentication (you can implement this using your backend or authentication service)
-        // For demonstration, let's assume authentication is successful and redirect to dashboard
-        alert(`Logged in with email: ${email}`);
-        // Redirect to dashboard page
-        window.location.href = '/dashboard.html';
-    });
-
-    // Function to handle signup form submission
-    signupForm.addEventListener('submit', function(event) {
-        event.preventDefault();
-
-        // Get input values
-        const name = document.getElementById('signup-name').value;
-        const email = document.getElementById('signup-email').value;
-        const password = document.getElementById('signup-password').value;
-
-        // Perform signup (you can implement this using your backend or authentication service)
-        // For demonstration, let's assume signup is successful and redirect to dashboard
-        alert(`Signed up with name: ${name}, email: ${email}`);
-        // Redirect to dashboard page
-        window.location.href = '/dashboard.html';
-    });
 });
