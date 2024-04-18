@@ -295,35 +295,75 @@ nav ul li a {
     margin-bottom: 40px;
 }
 
-#calorie-form {
-    max-width: 400px;
+.calorie-form {
+    max-width: 90%; 
     margin: 0 auto;
+    background-color: #f9f9f9;
+    padding: 30px; 
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.form-group {
-    margin-bottom: 20px;
+.calorie-form .form-group {
+    margin-bottom: 25px; 
 }
 
-.form-group label {
+.calorie-form label {
     display: block;
-    margin-bottom: 5px;
+    margin-bottom: 10px; 
+    font-size: 18px; 
 }
 
-.form-group input {
-    width: 100%;
-    padding: 10px;
-    font-size: 16px;
+.calorie-form input[type="number"] {
+    width: calc(100% - 20px);
+    padding: 15px; 
+    font-size: 18px;
     border: 1px solid #ccc;
-    border-radius: 5px;
+    border-radius: 8px;
 }
 
-#calorie-results {
-    margin-top: 40px;
+.calorie-form .btn {
+    display: block;
+    width: calc(100% - 20px); 
+    background-color: #007054ad;
+    color: #fff;
+    border: none;
+    padding: 15px; 
+    font-size: 18px; 
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.calorie-form .btn:hover {
+    background-color: #00CC99;
+}
+
+.calorie-results {
+    margin-top: 30px; 
     text-align: center;
 }
 
-#calorie-results p {
-    font-size: 18px;
+.calorie-results p {
+    font-size: 20px; 
+    padding: 20px; 
+    background-color: #00CC99;
+    color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1s ease;
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /* Exercise Logging Section styles */
@@ -336,13 +376,76 @@ nav ul li a {
     margin-bottom: 40px;
 }
 
-#exercise-form {
+.form {
     max-width: 400px;
     margin: 0 auto;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-#exercise-log {
-    margin-top: 40px;
+.form-group {
+    margin-bottom: 25px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.form-group input[type="text"],
+.form-group input[type="number"] {
+    width: calc(100% - 20px);
+    padding: 15px;
+    font-size: 18px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+.btn {
+    display: block;
+    width: calc(100% - 20px);
+    background-color: #007054;
+    color: #fff;
+    border: none;
+    padding: 15px;
+    font-size: 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #00CC99;
+}
+
+.log {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.log p {
+    font-size: 20px;
+    padding: 20px;
+    background-color: #00CC99;
+    color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1s ease;
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /* Goal Tracking Section styles */
@@ -364,6 +467,23 @@ nav ul li a {
     margin-top: 40px;
 }
 
+/* Styling for select tag */
+/* For Goal Tracking Section */
+.form-group select {
+    width: 95%;
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-image: url('data:image/svg+xml;utf8,<svg fill="%23007BFF" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/><path d="M0 0h24v24H0z" fill="none"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+}
+
 /* Educational Resources Section styles */
 .resource {
     margin-bottom: 30px;
@@ -378,6 +498,9 @@ nav ul li a {
 .resource img {
     display: block; 
     margin: 0 auto 10px; 
+    width: 100%;
+    max-width: 600px; 
+    height: auto; 
 }
 
 .resource a {
@@ -461,11 +584,38 @@ nav ul li a {
     transform-origin: left;
 }
 
-/* To adjust items in mobile view */
-
+/* To properly adjust on mobile viewing */
 @media (max-width: 600px) {
     .resource img {
         max-width: 100%;
         height: auto;
     }
+    .calorie-form {
+        padding: 20px;
+    }
+
+    .calorie-form label {
+        font-size: 16px;
+    }
+
+    .calorie-form input[type="number"],
+    .calorie-form .btn {
+        padding: 12px; 
+        font-size: 16px;
+    }
+    .form {
+        padding: 20px;
+    }
+
+    .form label {
+        font-size: 16px;
+    }
+
+    .form input[type="text"],
+    .form input[type="number"],
+    .btn {
+        padding: 12px;
+        font-size: 16px;
+    }
 }
+

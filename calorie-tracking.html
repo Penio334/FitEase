@@ -20,22 +20,24 @@
                 </nav>
             </div>
         </header>
-            <!-- Calorie Tracking Section -->
+        <!-- Calorie Tracking Section -->
 <section id="calorie-tracking" class="calorie-tracking">
     <div class="container">
         <h2>Calorie Tracking</h2>
-        <form id="calorie-form">
-            <div class="form-group">
-                <label for="calories-intake">Daily Calorie Intake:</label>
-                <input type="number" id="calories-intake" name="calories-intake" placeholder="Enter your calories intake">
-            </div>
-            <div class="form-group">
-                <label for="calories-goal">Calorie Goal:</label>
-                <input type="number" id="calories-goal" name="calories-goal" placeholder="Enter your calorie goal">
-            </div>
-            <button type="submit" class="btn">Submit</button>
-        </form>
-        <div id="calorie-results">
+        <div class="calorie-form">
+            <form id="calorie-form">
+                <div class="form-group">
+                    <label for="calories-intake">Daily Calorie Intake:</label>
+                    <input type="number" id="calories-intake" name="calories-intake" placeholder="Enter your calories intake">
+                </div>
+                <div class="form-group">
+                    <label for="calories-goal">Calorie Goal:</label>
+                    <input type="number" id="calories-goal" name="calories-goal" placeholder="Enter your calorie goal">
+                </div>
+                <button type="submit" class="btn">Submit</button>
+            </form>
+        </div>
+        <div id="calorie-results" class="calorie-results">
             <!-- Displayed results -->
         </div>
     </div>

@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
     const textElements = document.querySelectorAll('.slide-from-left');
 
-    // Delay each text animation
+    // Text animation delay
     textElements.forEach((element, index) => {
         element.style.animationDelay = `${index * 0.5}s`;
     });
@@ -36,31 +36,33 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-document.addEventListener('DOMContentLoaded', function() {
-    const exerciseForm = document.getElementById('exercise-form');
-    const exerciseLog = document.getElementById('exercise-log');
+document.addEventListener("DOMContentLoaded", function() {
+    // Submission event listener
+    document.getElementById("exercise-form").addEventListener("submit", function(event) {
+        event.preventDefault(); // Prevent default form submission
 
-    exerciseForm.addEventListener('submit', function(event) {
-        event.preventDefault();
+        // Input values
+        var exerciseName = document.getElementById("exercise-name").value;
+        var exerciseDuration = document.getElementById("exercise-duration").value;
+        var exerciseIntensity = document.getElementById("exercise-intensity").value;
 
-        const exerciseName = document.getElementById('exercise-name').value;
-        const exerciseDuration = parseInt(document.getElementById('exercise-duration').value);
-        const exerciseIntensity = parseInt(document.getElementById('exercise-intensity').value);
-
-        if (exerciseName.trim() === '' || isNaN(exerciseDuration) || isNaN(exerciseIntensity)) {
-            alert('Please fill out all fields with valid values.');
+        // If input is empty
+        if (!exerciseName || !exerciseDuration || !exerciseIntensity) {
+            // Display error message
+            document.getElementById("exercise-log").innerHTML = "<p>Please fill out all fields.</p>";
             return;
         }
 
-        const exerciseItem = document.createElement('div');
-        exerciseItem.classList.add('exercise-item');
-        exerciseItem.innerHTML = `
-            <strong>${exerciseName}</strong> - Duration: ${exerciseDuration} minutes, Intensity: ${exerciseIntensity}/10
-        `;
-        exerciseLog.appendChild(exerciseItem);
+        // Formating logged exercise data
+        var exerciseLogEntry = "<p>Exercise: " + exerciseName + ", Duration: " + exerciseDuration + " minutes, Intensity: " + exerciseIntensity + "</p>";
 
-        // Clears form
-        exerciseForm.reset();
+        // Append the logged exercise data to the exercise log section
+        document.getElementById("exercise-log").innerHTML += exerciseLogEntry;
+
+        // Clearing the fields after submission
+        document.getElementById("exercise-name").value = "";
+        document.getElementById("exercise-duration").value = "";
+        document.getElementById("exercise-intensity").value = "";
     });
 });
 
@@ -82,7 +84,7 @@ document.addEventListener('DOMContentLoaded', function() {
         // Storing user goal in localstorage
         localStorage.setItem('fitnessGoal', JSON.stringify({ type: goalType, target: goalTarget }));
 
-        // Display goal progress
+        // Displays goal progress
         displayGoalProgress();
     });
 
@@ -99,7 +101,6 @@ document.addEventListener('DOMContentLoaded', function() {
             <!-- Add progress tracking here -->
         `;
     }
-
-    // Display goal progress on page load
+    
     displayGoalProgress();
 });

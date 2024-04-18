@@ -1,51 +1,51 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Calorie Tracking</title>
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-         <!-- Header Section -->
-         <header>
-            <div class="container">
-                <a href="./"><img src="logo.png"></a>
-                <nav>
-                    <ul class="nav-links">
-                        <li><a href="./calorie-tracking">Calorie Tracking</a></li>
-                        <li><a href="./exercise-logging">Exercise Logging</a></li>
-                        <li><a href="./educational-resources">Educational Resources</a></li>
-                        <li><a href="./goal-tracking">Goal Tracking</a></li>
-                        <li><a href="./login">Login / Sign up</a></li>
-                    </ul>
-                </nav>
-            </div>
-        </header>
-        
-        <!-- Goal Tracking Section -->
-<section id="goal-tracking" class="goal-tracking">
-    <div class="container">
-        <h2>Goal Tracking</h2>
-        <form id="goal-form">
-            <div class="form-group">
-                <label for="goal-type">Goal Type:</label>
-                <select id="goal-type" name="goal-type">
-                    <option value="weight-loss">Weight Loss</option>
-                    <option value="muscle-gain">Muscle Gain</option>
-                    <option value="maintenance">Maintenance</option>
-                </select>
-            </div>
-            <div class="form-group">
-                <label for="goal-target">Target:</label>
-                <input type="number" id="goal-target" name="goal-target" placeholder="Enter your target">
-            </div>
-            <button type="submit" class="btn">Set Goal</button>
-        </form>
-        <div id="goal-progress">
-            <!-- Displayed progress-->
+<head>
+    <title>Calorie Tracking</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <a href="./"><img src="logo.png"></a>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="./calorie-tracking">Calorie Tracking</a></li>
+                    <li><a href="./exercise-logging">Exercise Logging</a></li>
+                    <li><a href="./educational-resources">Educational Resources</a></li>
+                    <li><a href="./goal-tracking">Goal Tracking</a></li>
+                    <li><a href="./login">Login / Sign up</a></li>
+                </ul>
+            </nav>
         </div>
-    </div>
-</section>
+    </header>
+    
+    <!-- Goal Tracking Section -->
+    <section id="goal-tracking" class="goal-tracking">
+        <div class="container">
+            <h2>Goal Tracking</h2>
+            <form id="goal-form">
+                <div class="form-group">
+                    <label for="goal-type">Goal Type:</label>
+                    <select id="goal-type" name="goal-type">
+                        <option value="weight-loss">Weight Loss</option>
+                        <option value="muscle-gain">Muscle Gain</option>
+                        <option value="maintenance">Maintenance</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="goal-target">Target:</label>
+                    <input type="number" id="goal-target" name="goal-target" placeholder="Enter your target">
+                </div>
+                <button type="submit" class="btn">Set Goal</button>
+            </form>
+            <div id="goal-progress">
+                <!-- Displayed progress-->
+            </div>
+        </div>
+    </section>
 
-        <script src="script.js"></script>
-    </body>
+    <script src="script.js"></script>
+</body>
 </html>
