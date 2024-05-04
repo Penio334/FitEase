@@ -1,3 +1,4 @@
+// Hero section Animation
 document.addEventListener('DOMContentLoaded', function() {
     const textElements = document.querySelectorAll('.slide-from-left');
 
@@ -7,6 +8,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
+// Calorie Tracker Section
 document.addEventListener('DOMContentLoaded', function() {
     const form = document.getElementById('calorie-form');
     const resultsContainer = document.getElementById('calorie-results');
@@ -20,22 +22,28 @@ document.addEventListener('DOMContentLoaded', function() {
         if (!isNaN(caloriesIntake) && !isNaN(caloriesGoal)) {
             const calorieDifference = caloriesGoal - caloriesIntake;
             let message;
+            let resultClass;
 
+            // Results
             if (calorieDifference > 0) {
                 message = `You are ${calorieDifference} calories under your goal.`;
-            } else if (calorieDifference < 0) {
-                message = `You have exceeded your goal by ${Math.abs(calorieDifference)} calories.`;
-            } else {
+                resultClass = 'under-goal';
+            } else if (calorieDifference >= -100) {
                 message = "You have reached your calorie goal!";
+                resultClass = 'reached-goal';
+            } else {
+                message = `You have exceeded your goal by ${Math.abs(calorieDifference)} calories.`;
+                  resultClass = 'exceeded-goal';
             }
 
-            resultsContainer.innerHTML = `<p>${message}</p>`;
+            resultsContainer.innerHTML = `<p class="${resultClass}">${message}</p>`;
         } else {
             resultsContainer.innerHTML = `<p>Please enter valid numbers.</p>`;
         }
     });
 });
 
+// Exercise Logging Section
 document.addEventListener("DOMContentLoaded", function() {
     // Submission event listener
     document.getElementById("exercise-form").addEventListener("submit", function(event) {
@@ -66,6 +74,7 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
+// Goal Tracker Section
 document.addEventListener('DOMContentLoaded', function() {
     const goalForm = document.getElementById('goal-form');
     const goalProgress = document.getElementById('goal-progress');
