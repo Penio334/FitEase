@@ -383,7 +383,7 @@ nav ul li a {
 }
 
 .calorie-results p.exceeded-goal {
-    background-color: red;
+    background-color: #f43f70;
     color: white;
 }
 
