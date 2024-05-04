@@ -30,9 +30,9 @@ header {
 
 header img {
     width: 200px; 
-    height: 10%;
-    margin-top: -20px;
-    margin-right: 35px;
+    height: auto;
+    margin: 0 auto;
+    display: block; 
 }
 
 .logo {
@@ -619,6 +619,10 @@ nav ul li a {
 
 /* To properly adjust on mobile viewing */
 @media (max-width: 600px) {
+    header img {
+        width: 150px;
+    }
+    
     .resource img {
         max-width: 100%;
         height: auto;
